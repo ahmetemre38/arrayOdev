@@ -1,23 +1,24 @@
+//import { dataStudents, dataDepartments } from './data';
 const { dataStudents, 
-        dataDepartments, 
-        dataLessons,
-        dataStudentGrades
+        dataDepartments
         } = require('./data');
 
-//console.table(dataStudents());
 let result = dataStudents().map(student => {
-        return {
+    let longGender = null;
+    if (student.gender == 'E') longGender='Erkek';
+    else if (student.gender == 'K') longGender='Kadın';
+    return {
             Id : student.id,
             Department : dataDepartments().find(department => (department.id == student.departmentId)).shortName,
             'Full Name' : student.name + ' ' + student.surName,
-            //TODO : Gender E ise Erkek, K ise Kadın yazdirilacak
+            //TODO : arrow function ile Gender E ise Erkek, K ise Kadın yazdirilacak
             // Gender : (student.gender) => { 
             //             if (student.gender == 'E') 
             //                 return 'Erkek'
             //             else 
             //                 return 'Kadın' },
-            Gender : student.gender,
-            BirthYear : student.birthYear,
+            Gender : longGender,
+            Age : (new Date()).getFullYear() - student.birthYear,
             StartYear : student.startYear 
         }
 });
