@@ -35,16 +35,16 @@ const dataLessons = () => {
 //#region studentGrades
 const studentGrades = [
         {id:1, studentId:1, lessonId :1, vize:60, final:70},
-        {id:2, studentId:1, lessonId :2, vize:20, final:70},
+        {id:2, studentId:1, lessonId :2, vize:20, final:50},
         {id:3, studentId:1, lessonId :3, vize:45, final:55},
         {id:4, studentId:2, lessonId :1, vize:78, final:88},
         {id:5, studentId:2, lessonId :2, vize:90, final:100},
         {id:6, studentId:2, lessonId :3, vize:70, final:80},
-        {id:7, studentId:3, lessonId :1, vize:44, final:56},
+        {id:7, studentId:3, lessonId :1, vize:44, final:50},
         {id:8, studentId:3, lessonId :2, vize:55, final:70},
         {id:9, studentId:3, lessonId :3, vize:45, final:65},
         {id:10, studentId:4, lessonId :1, vize:60, final:70},
-        {id:11, studentId:4, lessonId :2, vize:20, final:70},
+        {id:11, studentId:4, lessonId :2, vize:20, final:50},
         {id:12, studentId:4, lessonId :3, vize:45, final:55},
         {id:13, studentId:5, lessonId :1, vize:78, final:88},
         {id:14, studentId:5, lessonId :2, vize:90, final:100},
@@ -101,7 +101,8 @@ module.exports = {
     dataDepartments
 };
 
+
 //console.log(dataDepartments()[0].lastName);
-console.table(dataStudentsQuery());
+//console.table(dataStudentsQuery());
 
 
