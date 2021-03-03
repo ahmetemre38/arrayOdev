@@ -14,6 +14,6 @@ let result = dataStudents().map(student => {
             Age : (new Date()).getFullYear() - student.birthYear,
             StartYear : student.startYear 
         }
-    }).filter(student => student.Gender == 'Erkek').find(student => student.Department == 'Bil.Müh.');
+    }).filter(student => student.Gender == 'Erkek').find(student => student.Department == 'Bil.Müh.' && student['Full Name'] == 'Ahmet Yilmaz');
 
-console.log(result);
+console.table(result);
