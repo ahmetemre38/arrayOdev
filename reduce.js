@@ -3,7 +3,6 @@ const { dataStudents,
     dataStudentGrades
     } = require('./data');
 
-
 let result = dataStudentGrades().reduce((totalFinal, item) => {
     return totalFinal = totalFinal + item.final,0
 });
