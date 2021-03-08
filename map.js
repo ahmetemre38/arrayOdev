@@ -17,7 +17,8 @@ let result = dataStudents().map(student => {
             //                 return 'Erkek'
             //             else 
             //                 return 'Kadın' },
-            Gender : longGender,
+            Gender : () => { if student.gender == 'K'?'Kadın':'Erkek' },
+            //Gender : longGender,
             Age : (new Date()).getFullYear() - student.birthYear,
             StartYear : student.startYear 
         }
