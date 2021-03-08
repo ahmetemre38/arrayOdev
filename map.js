@@ -12,12 +12,12 @@ let result = dataStudents().map(student => {
             Department : dataDepartments().find(department => (department.id == student.departmentId)).shortName,
             'Full Name' : student.name + ' ' + student.surName,
             //TODO : arrow function ile Gender E ise Erkek, K ise Kadın yazdirilacak
-            // Gender : (student.gender) => { 
-            //             if (student.gender == 'E') 
-            //                 return 'Erkek'
-            //             else 
-            //                 return 'Kadın' },
-            Gender : () => { if student.gender == 'K'?'Kadın':'Erkek' },
+            Gender : (student) => { 
+                        if (student.gender == 'E') 
+                            return 'Erkek'
+                        else 
+                            return 'Kadın' },
+            //Gender :  student.gender == 'K'?'Kadın':'Erkek',
             //Gender : longGender,
             Age : (new Date()).getFullYear() - student.birthYear,
             StartYear : student.startYear 
